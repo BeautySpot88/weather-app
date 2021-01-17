@@ -1,0 +1,142 @@
+body {
+  color: #52b3a9;
+  font-family: "Ubuntu", sans-serif;
+}
+
+input {
+  border: solid grey 2px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+}
+
+h1 {
+  color: #52b3a9;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: #5a6275;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 6vh;
+  text-align: center;
+  font-weight: 900;
+}
+
+h5 {
+  color: #5a6275;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0px;
+}
+
+hr {
+  color: #5a6275;
+  height: 4px;
+}
+
+.container {
+  border: solid grey 2px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.search-btn,
+.location {
+  border: none;
+  background: white;
+  width: 35px;
+  margin: 0px 5px;
+}
+
+.location {
+  color: red;
+  margin: 5px 5px;
+}
+
+.cel-fah {
+  border: none;
+  background: none;
+  color: #52b3a9;
+}
+
+.today-hi {
+  font-size: 15px;
+}
+
+.today-lo {
+  font-size: 15px;
+}
+
+.lo-temp-icon {
+  color: lightskyblue;
+}
+
+.hi-temp-icon {
+  color: lightcoral;
+}
+
+.forecast-icon {
+  font-size: 90px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0px;
+}
+
+.forecast-descrip {
+  margin: 0px;
+  font-size: 25px;
+}
+
+.upcoming-hours {
+  color: #5a6275;
+  margin-top: 15px;
+}
+
+.now {
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+.hi-lo-temps {
+  color: #5a6275;
+  font-size: 10px;
+}
+.plus1-hi,
+.plus2-hi,
+.plus3-hi,
+.plus4-hi,
+.plus5-hi {
+  color: red;
+  font-size: 10px;
+}
+
+.plus1-lo,
+.plus2-lo,
+.plus3-lo,
+.plus4-lo,
+.plus5-lo {
+  color: blue;
+  font-size: 10px;
+}
+.capital {
+  text-transform: capitalize;
+}
