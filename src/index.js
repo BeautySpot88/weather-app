@@ -1,5 +1,6 @@
-//Current date and time
+// Functions
 
+//Display day and time
 function dateTime(date) {
   let days = [
     "Sunday",
@@ -22,8 +23,6 @@ function dateTime(date) {
   }
   return `${day} ${hour}:${minute}`;
 }
-let today = document.querySelector("h5");
-today.innerHTML = dateTime(new Date());
 
 function currentTemperature(response) {
   //Celcius temp display
@@ -55,6 +54,10 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+let today = document.querySelector("h5");
+today.innerHTML = dateTime(new Date());
+
 // submit button
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);

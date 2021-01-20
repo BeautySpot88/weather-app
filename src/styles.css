@@ -14,32 +14,45 @@ h1 {
   color: #52b3a9;
   font-size: 60px;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
+  margin-bottom: 0px;
   text-transform: capitalize;
 }
 
 h2 {
   color: #5a6275;
   font-size: 50px;
-  text-align: center;
+  text-align: left;
   font-weight: 900;
-  margin-bottom: 0;
+  margin: 20px 0px;
   padding: 0;
 }
 
 h3 {
-  font-size: 6vh;
-  text-align: center;
+  font-size: 15px;
+  text-align: left;
   font-weight: 900;
+  margin: 0px;
+}
+
+ul {
+  margin-top: 40px;
+  padding: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  text-align: left;
 }
 
 h5 {
   color: #5a6275;
   font-size: 15px;
   font-weight: 900;
-  text-align: center;
-  margin-top: 0px;
+  text-align: left;
+  margin: 0px;
 }
 
 hr {
@@ -48,14 +61,16 @@ hr {
 }
 
 .container {
-  border: solid grey 2px;
+  max-width: 650px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 .weather-app {
+  border: solid grey 2px;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .search-btn,
@@ -94,8 +109,7 @@ hr {
 }
 
 .forecast-icon {
-  font-size: 90px;
-  text-align: center;
+  font-size: 40px;
   margin-bottom: 0;
   padding: 0;
   margin: 0px;
