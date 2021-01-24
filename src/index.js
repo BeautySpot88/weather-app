@@ -74,6 +74,20 @@ document.querySelector("#forecastDay2").innerHTML = forecastDate(response.data.d
 document.querySelector("#forecastDay3").innerHTML = forecastDate(response.data.daily[4].dt);
 document.querySelector("#forecastDay4").innerHTML = forecastDate(response.data.daily[5].dt);
 
+document.querySelector("#hourplus1").innerHTML = forecastHour(response.data.hourly[1].dt);
+document.querySelector("#hourplus2").innerHTML = forecastHour(response.data.hourly[2].dt);
+document.querySelector("#hourplus3").innerHTML = forecastHour(response.data.hourly[3].dt);
+document.querySelector("#hourplus4").innerHTML = forecastHour(response.data.hourly[4].dt);
+document.querySelector("#hourplus5").innerHTML = forecastHour(response.data.hourly[5].dt);
+
+document.querySelector("#tempNow").innerHTML = Math.round(response.data.hourly[0].temp) + "˚C";
+document.querySelector("#tempHour1").innerHTML = Math.round(response.data.hourly[1].temp) + "˚C";
+document.querySelector("#tempHour2").innerHTML = Math.round(response.data.hourly[2].temp) + "˚C";
+document.querySelector("#tempHour3").innerHTML = Math.round(response.data.hourly[3].temp) + "˚C";
+document.querySelector("#tempHour4").innerHTML = Math.round(response.data.hourly[4].temp) + "˚C";
+document.querySelector("#tempHour5").innerHTML = Math.round(response.data.hourly[5].temp) + "˚C";
+
+
 function forecastDate(date) {
   let days = [
     "Sunday",
@@ -89,9 +103,18 @@ let dayName = new Date(date*1000);
 dayName = dayName.getDay();
 let day = days[dayName];
 
- return day;
+ return day; 
+}
 
-  
+function forecastHour(date) {
+  let dateHours = new Date(date*1000);
+let hour = dateHours.getHours();
+if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  return hour;
+
 }
 
 }
