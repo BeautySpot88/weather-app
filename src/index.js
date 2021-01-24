@@ -148,7 +148,16 @@ function getCurrentLocation(event) {
 function toFahrenheit(event){
 let fahrenheit = (temperature * 9/5) + 32;
 document.querySelector("#temperature").innerHTML = `${Math.round(fahrenheit)}˚F`;
+convertToFahrenheit.classList.add("active");
+convertToCelcius.classList.remove("active");
 
+}
+
+function toCelcius(event){
+let celcius = temperature;
+document.querySelector("#temperature").innerHTML = `${Math.round(celcius)}˚C`;
+convertToCelcius.classList.add("active");
+convertToFahrenheit.classList.remove("active");
 }
 
 let temperature = null;
@@ -167,5 +176,9 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 //Fahrenheit button
 let convertToFahrenheit = document.querySelector("#fah-btn");
 convertToFahrenheit.addEventListener("click", toFahrenheit);
+
+//Celcius button
+let convertToCelcius = document.querySelector("#cel-btn");
+convertToCelcius.addEventListener("click", toCelcius);
 
 search("London");

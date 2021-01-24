@@ -1,6 +1,6 @@
 body {
   color: #52b3a9;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 input {
@@ -23,7 +23,7 @@ h2 {
   color: #5a6275;
   font-size: 50px;
   text-align: left;
-  font-weight: 900;
+  font-weight: 600;
   margin: 20px 0px;
   padding: 0;
 }
@@ -47,7 +47,7 @@ li {
 h5 {
   color: #5a6275;
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 500;
   text-align: left;
   margin: 0px;
 }
@@ -95,8 +95,25 @@ hr {
   color: #52b3a9;
   padding: 0px 5px;
   text-align: right;
+  text-decoration: none;
 }
 
+.cel-fah:hover {
+  color: #52b3a9;
+  text-decoration: none;
+  font-weight: 700;
+}
+.active {
+  color: #5a6275;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #5a6275;
+}
 .today-hi,
 .today-lo {
   font-size: 15px;
