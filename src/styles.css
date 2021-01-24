@@ -12,11 +12,10 @@ input {
 
 h1 {
   color: #52b3a9;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 900;
-  text-align: left;
   margin-top: 30px;
-  margin-bottom: 0px;
+  text-align: left;
   text-transform: capitalize;
 }
 
@@ -37,8 +36,6 @@ h3 {
 }
 
 ul {
-  margin-top: 40px;
-  padding: 20px;
   list-style-type: none;
   padding-left: 0;
 }
@@ -58,6 +55,12 @@ h5 {
 hr {
   color: #5a6275;
   height: 4px;
+}
+
+.icons {
+  padding: 10px;
+  height: 70px;
+  width: 70px;
 }
 
 .container {
@@ -92,12 +95,10 @@ hr {
   color: #52b3a9;
 }
 
-.today-hi {
-  font-size: 15px;
-}
-
+.today-hi,
 .today-lo {
   font-size: 15px;
+  padding: 0px 7px;
 }
 
 .lo-temp-icon {
@@ -118,6 +119,7 @@ hr {
 .forecast-descrip {
   margin: 0px;
   font-size: 25px;
+  text-transform: capitalize;
 }
 
 .upcoming-hours {
