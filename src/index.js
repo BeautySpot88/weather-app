@@ -34,8 +34,7 @@ function currentTemperature(response) {
   document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `Wind: ${3.6 * Math.round(response.data.wind.speed)}km/h`;
   document.querySelector(".forecast-icon").setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-   let currentLon = response.data.coord.lon;
-  let currentLat = response.data.coord.lat;
+  temperature = response.data.main.temp;
   fiveDayForecast (response.data.coord);
 
   function fiveDayForecast (position) {
@@ -114,11 +113,8 @@ if (hour < 10) {
   }
 
   return hour;
-
 }
-
 }
-
 
 
 function search(city) {
@@ -149,6 +145,14 @@ function getCurrentLocation(event) {
   today.innerHTML = dateTime(new Date());
 }
 
+function toFahrenheit(event){
+let fahrenheit = (temperature * 9/5) + 32;
+document.querySelector("#temperature").innerHTML = `${Math.round(fahrenheit)}˚F`;
+
+}
+
+let temperature = null;
+
 let today = document.querySelector("#today");
 today.innerHTML = dateTime(new Date());
 
@@ -159,5 +163,9 @@ searchForm.addEventListener("submit", handleSubmit);
 //Current location button
 let currentLocationButton = document.querySelector("#location-btn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//Fahrenheit button
+let convertToFahrenheit = document.querySelector("#fah-btn");
+convertToFahrenheit.addEventListener("click", toFahrenheit);
 
 search("London");

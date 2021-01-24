@@ -93,6 +93,8 @@ hr {
   border: none;
   background: none;
   color: #52b3a9;
+  padding: 0px 5px;
+  text-align: right;
 }
 
 .today-hi,
