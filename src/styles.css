@@ -35,6 +35,10 @@ h3 {
   margin: 0px;
 }
 
+h4 {
+  font-size: 15px;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -155,23 +159,19 @@ hr {
   color: #5a6275;
   font-size: 10px;
 }
-.plus1-hi,
-.plus2-hi,
-.plus3-hi,
-.plus4-hi,
-.plus5-hi {
+.plus-hi {
   color: red;
   font-size: 10px;
 }
 
-.plus1-lo,
-.plus2-lo,
-.plus3-lo,
-.plus4-lo,
-.plus5-lo {
+.plus-lo {
   color: blue;
   font-size: 10px;
 }
+.hi-lo {
+  font-size: 10px;
+}
+
 .capital {
   text-transform: capitalize;
 }
