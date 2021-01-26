@@ -57,8 +57,8 @@ let forecastDays = null;
 
 for (let i = 1; i < 7; i++) {
   forecastHours = response.data.hourly[i];
-  forecastElementHours.innerHTML += ` <div class="col" id="hourly-${i}"><h4>${Math.round(forecastHours.temp)}˚C</h4>
-            ${forecastHour(forecastHours.dt)}</div>`;
+  forecastElementHours.innerHTML += ` <div class="col"><h4 id="hourly-${i}">${Math.round(forecastHours.temp)}˚C</h4>
+            <h4>${forecastHour(forecastHours.dt)}</h4></div>`;
 }
 
 for (let i = 1; i < 6; i++) {
@@ -84,6 +84,12 @@ high4 = response.data.daily[4].temp.max;
 low4 = response.data.daily[4].temp.min;
 high5 = response.data.daily[4].temp.max;
 low5 = response.data.daily[4].temp.min;
+hourly1 = response.data.hourly[1].temp;
+hourly2 = response.data.hourly[2].temp;
+hourly3 = response.data.hourly[3].temp;
+hourly4 = response.data.hourly[4].temp;
+hourly5 = response.data.hourly[5].temp;
+hourly6 = response.data.hourly[6].temp;
 
 function forecastDate(date) {
   let days = [
@@ -149,27 +155,43 @@ function getCurrentLocation(event) {
 function toFahrenheit(event){
 let fahrenheit = (temperature * 9/5) + 32;
 document.querySelector("#temperature").innerHTML = `${Math.round(fahrenheit)}˚F`;
-
+//convert hi lo temps for current, hours and days
 let highTempConvert = (highTemp * 9/5) + 32;
-document.querySelector(".today-hi").innerHTML = `${Math.round(highTempConvert)}˚F`
+document.querySelector(".today-hi").innerHTML = `${Math.round(highTempConvert)}˚F`;
 let lowTempConvert = (lowTemp * 9/5) + 32;
-document.querySelector(".today-lo").innerHTML = `${Math.round(lowTempConvert)}˚F`
+document.querySelector(".today-lo").innerHTML = `${Math.round(lowTempConvert)}˚F`;
 let day1HighTemp = (high1 * 9/5) + 32;
-document.querySelector("#high-1").innerHTML = `${Math.round(day1HighTemp)}˚F`
+document.querySelector("#high-1").innerHTML = `${Math.round(day1HighTemp)}˚F`;
 let day1LowTemp = (low1 * 9/5) + 32;
-document.querySelector("#lo-1").innerHTML = `${Math.round(day1LowTemp)}˚F`
+document.querySelector("#lo-1").innerHTML = `${Math.round(day1LowTemp)}˚F`;
 let day2HighTemp = (high2 * 9/5) + 32;
-document.querySelector("#high-2").innerHTML = `${Math.round(day2HighTemp)}˚F`
+document.querySelector("#high-2").innerHTML = `${Math.round(day2HighTemp)}˚F`;
 let day2LowTemp = (low2 * 9/5) + 32;
-document.querySelector("#lo-2").innerHTML = `${Math.round(day2LowTemp)}˚F`
+document.querySelector("#lo-2").innerHTML = `${Math.round(day2LowTemp)}˚F`;
 let day3HighTemp = (high3 * 9/5) + 32;
-document.querySelector("#high-3").innerHTML = `${Math.round(day3HighTemp)}˚F`
+document.querySelector("#high-3").innerHTML = `${Math.round(day3HighTemp)}˚F`;
 let day3LowTemp = (low3 * 9/5) + 32;
-document.querySelector("#lo-3").innerHTML = `${Math.round(day3LowTemp)}˚F`
+document.querySelector("#lo-3").innerHTML = `${Math.round(day3LowTemp)}˚F`;
 let day4HighTemp = (high4 * 9/5) + 32;
-document.querySelector("#high-4").innerHTML = `${Math.round(day4HighTemp)}˚F`
+document.querySelector("#high-4").innerHTML = `${Math.round(day4HighTemp)}˚F`;
 let day4LowTemp = (low4 * 9/5) + 32;
-document.querySelector("#lo-4").innerHTML = `${Math.round(day4LowTemp)}˚F`
+document.querySelector("#lo-4").innerHTML = `${Math.round(day4LowTemp)}˚F`;
+let day5HighTemp = (high5 * 9/5) + 32;
+document.querySelector("#high-5").innerHTML = `${Math.round(day5HighTemp)}˚F`;
+let day5LowTemp = (low5 * 9/5) + 32;
+document.querySelector("#lo-5").innerHTML = `${Math.round(day5LowTemp)}˚F`;
+let hour1Temp = (hourly1*9/5) + 32;
+document.querySelector("#hourly-1").innerHTML = `${Math.round(hour1Temp)}˚F`;
+let hour2Temp = (hourly2*9/5) + 32;
+document.querySelector("#hourly-2").innerHTML = `${Math.round(hour2Temp)}˚F`;
+let hour3Temp = (hourly3*9/5) + 32;
+document.querySelector("#hourly-3").innerHTML = `${Math.round(hour3Temp)}˚F`;
+let hour4Temp = (hourly4*9/5) + 32;
+document.querySelector("#hourly-4").innerHTML = `${Math.round(hour4Temp)}˚F`;
+let hour5Temp = (hourly5*9/5) + 32;
+document.querySelector("#hourly-5").innerHTML = `${Math.round(hour5Temp)}˚F`;
+let hour6Temp = (hourly6*9/5) + 32;
+document.querySelector("#hourly-6").innerHTML = `${Math.round(hour6Temp)}˚F`;
 
 convertToFahrenheit.classList.add("active");
 convertToCelcius.classList.remove("active");
@@ -179,6 +201,27 @@ convertToCelcius.classList.remove("active");
 function toCelcius(event){
 let celcius = temperature;
 document.querySelector("#temperature").innerHTML = `${Math.round(celcius)}˚C`;
+document.querySelector(".today-hi").innerHTML = `${Math.round(highTemp)}˚C`;
+document.querySelector(".today-lo").innerHTML = `${Math.round(lowTemp)}˚C`;
+
+document.querySelector("#high-1").innerHTML = `${Math.round(high1)}˚C`;
+document.querySelector("#lo-1").innerHTML = `${Math.round(low1)}˚C`;
+document.querySelector("#high-2").innerHTML = `${Math.round(high2)}˚C`;
+document.querySelector("#lo-2").innerHTML = `${Math.round(low2)}˚C`;
+document.querySelector("#high-3").innerHTML = `${Math.round(high3)}˚C`;
+document.querySelector("#lo-3").innerHTML = `${Math.round(low3)}˚C`;
+document.querySelector("#high-4").innerHTML = `${Math.round(high4)}˚C`;
+document.querySelector("#lo-4").innerHTML = `${Math.round(low4)}˚C`;
+document.querySelector("#high-5").innerHTML = `${Math.round(high5)}˚C`;
+document.querySelector("#lo-5").innerHTML = `${Math.round(low5)}˚C`;
+
+document.querySelector("#hourly-1").innerHTML = `${Math.round(hourly1)}˚C`;
+document.querySelector("#hourly-2").innerHTML = `${Math.round(hourly2)}˚C`;
+document.querySelector("#hourly-3").innerHTML = `${Math.round(hourly3)}˚C`;
+document.querySelector("#hourly-4").innerHTML = `${Math.round(hourly4)}˚C`;
+document.querySelector("#hourly-5").innerHTML = `${Math.round(hourly5)}˚C`;
+document.querySelector("#hourly-6").innerHTML = `${Math.round(hourly6)}˚C`;
+
 convertToCelcius.classList.add("active");
 convertToFahrenheit.classList.remove("active");
 }
@@ -196,6 +239,13 @@ let high4 = null;
 let low4 = null;
 let high5 = null;
 let low5 = null;
+let hourly1 = null;
+let hourly2 = null;
+let hourly3 = null;
+let hourly4 = null;
+let hourly5 = null;
+let hourly6 = null;
+
 
 
 let today = document.querySelector("#today");
