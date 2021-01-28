@@ -1,5 +1,5 @@
 body {
-  color: #52b3a9;
+  color: white;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -11,7 +11,7 @@ input {
 }
 
 h1 {
-  color: #52b3a9;
+  color: white;
   font-size: 55px;
   font-weight: 900;
   margin-top: 30px;
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  color: #5a6275;
+  color: white;
   font-size: 50px;
   text-align: left;
   font-weight: 600;
@@ -49,7 +49,7 @@ li {
 }
 
 h5 {
-  color: #5a6275;
+  color: white;
   font-size: 15px;
   font-weight: 500;
   text-align: left;
@@ -57,8 +57,12 @@ h5 {
 }
 
 hr {
-  color: #5a6275;
-  height: 4px;
+  color: white;
+  height: 8px;
+}
+
+small {
+  color: greenyellow;
 }
 
 .icons {
@@ -78,12 +82,16 @@ hr {
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
+  background-image: url("images/night.png");
+  background-size: cover;
+  opacity: 0.6;
 }
+
 
 .search-btn,
 .location {
   border: none;
-  background: white;
+  background: none;
   width: 35px;
   margin: 0px 5px;
 }
@@ -160,12 +168,12 @@ hr {
   font-size: 10px;
 }
 .plus-hi {
-  color: red;
+  color: lightcoral;
   font-size: 10px;
 }
 
 .plus-lo {
-  color: blue;
+  color: lightskyblue;
   font-size: 10px;
 }
 .hi-lo {
