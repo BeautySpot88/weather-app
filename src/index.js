@@ -25,12 +25,27 @@ function currentTemperature(response) {
   document.querySelector(".forecast-icon").setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   temperature = response.data.main.temp;
   fiveDayForecast (response.data.coord);
-  let localTimeUnix = ((new Date().getTime()/1000) +response.data.timezone)*1000;
+  let localTimeUnix = ((new Date().getTime()/1000) + response.data.timezone)*1000;
  let localTime = new Date(localTimeUnix);
- let localHour = localTime.toLocaleString("en-US", {weekday: "long", hour: "numeric", minute: "numeric",  hour12: false})
+ let localHour = localTime.toLocaleString("en-US", {weekday: "long", hour: "numeric", minute: "numeric",   hourCycle: "h23" })
+ let dayHour = localTime.toLocaleString("en-US", {hour: "numeric", hourCycle: "h23"});
 document.querySelector("#local-time").innerHTML = `Local Time: ${localHour}`;
 
-console.log(localHour);
+if (dayHour > 5 && dayHour < 12) {
+  document.querySelector(".weather-app").setAttribute("id", "morning");
+} else if (dayHour >= 12 && dayHour < 18) {
+  document.querySelector(".weather-app").setAttribute("id", "afternoon");
+  document.querySelector(".today-hi").style.color = "#ed6e30";
+  document.querySelector(".today-lo").style.color = "#ed6e30";
+  document.querySelector("#humidity").style.color = "#ed6e30";
+  document.querySelector("#wind").style.color = "#ed6e30";
+} else if (dayHour >= 18 && dayHour < 21) {
+  document.querySelector(".weather-app").setAttribute("id", "evening");
+} else if (dayHour >= 21 || dayHour < 5) {
+  document.querySelector(".weather-app").setAttribute("id", "night");
+}
+
+console.log(dayHour);
 
   function fiveDayForecast (position) {
   let lon = position.lon;
