@@ -198,7 +198,7 @@ small {
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
-  background-image: url("images/afternoon2.png");
+  background-image: url("images/afternoon.gif");
   background-size: 100% 100%;
 }
 
@@ -208,7 +208,7 @@ small {
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
-  background-image: url("images/evening.jpg");
+  background-image: url("images/evening.gif");
   background-size: 100% 100%;
 }
 
@@ -218,6 +218,6 @@ small {
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
-  background-image: url("images/night.png");
+  background-image: url("images/night.gif");
   background-size: 100% 100%;
 }
