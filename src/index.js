@@ -39,22 +39,10 @@ if (dayHour > 5 && dayHour < 12) {
   document.querySelector("#wind").style.color = "white";
 } else if (dayHour >= 12 && dayHour < 18) {
   document.querySelector(".weather-app").setAttribute("id", "afternoon");
-  document.querySelector(".today-hi").style.color = "white";
-  document.querySelector(".today-lo").style.color = "white";
-  document.querySelector("#humidity").style.color = "white";
-  document.querySelector("#wind").style.color = "white";
 } else if (dayHour >= 18 && dayHour < 21) {
   document.querySelector(".weather-app").setAttribute("id", "evening");
-  document.querySelector(".today-hi").style.color = "white";
-  document.querySelector(".today-lo").style.color = "white";
-  document.querySelector("#humidity").style.color = "white";
-  document.querySelector("#wind").style.color = "white";
 } else if (dayHour >= 21 || dayHour < 5) {
   document.querySelector(".weather-app").setAttribute("id", "night");
-  document.querySelector(".today-hi").style.color = "white";
-  document.querySelector(".today-lo").style.color = "white";
-  document.querySelector("#humidity").style.color = "white";
-  document.querySelector("#wind").style.color = "white";
 }
 
 console.log(dayHour);
