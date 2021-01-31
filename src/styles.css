@@ -13,8 +13,7 @@ input {
 h1 {
   font-size: 55px;
   font-weight: 900;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 30px;
   text-align: left;
   text-transform: capitalize;
 }
@@ -194,7 +193,7 @@ small {
   padding: 10px;
   border-radius: 10px;
   background-image: url("images/morn.gif");
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 #afternoon {
